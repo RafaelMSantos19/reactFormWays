@@ -1,15 +1,20 @@
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--color-route-bg', 'blue'); 
+  }, []);
+
+
   return (
     <div className="App">
       <header className="App-header">
           <div className="Color-route">
             <div className="Form-layer">
                 <p>
-                  <h3>
-                      Check List Rotas
-                  </h3>
+                  <h3> Check List Rotas</h3>
                   <button > Iniciar agora </button>
                 </p>
             </div>
