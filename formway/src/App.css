@@ -1,5 +1,7 @@
+/* App.css */
+
 :root {
-  --color-route-bg: #f0f0f0; 
+  --color-route-bg: gray; /* Cor inicial cinza */
 }
 
 .App {
@@ -45,19 +47,17 @@
   }
 }
 
-
-.Color-route{
-  background-color:var(--color-route-bg);
+.Color-route {
+  background-color: var(--color-route-bg);
   width: 85%;
   height: 100%;
   margin-top: 6%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
-.Form-layer{
+.Form-layer {
   background-color: white;
   width: 95%;
   height: 100%;
@@ -66,8 +66,24 @@
   color: black;
 }
 
-.Form-layer button {
+.Form-layer label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
 
+.Form-layer select,
+.Form-layer input[type="text"],
+.Form-layer textarea {
+  width: calc(100% - 20px); /* Reduzindo a largura para compensar o padding */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.Form-layer button {
   background-color: #007bff;
   border: none;
   color: white;
@@ -79,10 +95,28 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
-  margin-top: 7%; 
-
+  margin-top: 7%;
 }
 
 .Form-layer button:hover {
   background-color: #0056b3;
+}
+
+.FormItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.FormItem label {
+  margin-bottom: 8px;
+}
+
+.FormItem input[type="radio"],
+.FormItem input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.FormItem textarea {
+  resize: vertical;
 }
